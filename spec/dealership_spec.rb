@@ -19,8 +19,12 @@ RSpec.describe Dealership do
     expect(@dealership.inventory_count).to eq(0)
   end
 
+  it 'can add inventory' do
+    car_1 = Car.new("Ford Mustang", 1500, 36)
+    @dealership.add_car(@car_1)
 
-
+    expect(@dealership.inventory).to eq([@car1])
+  end
 
 
 
