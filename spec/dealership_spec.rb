@@ -11,6 +11,9 @@ RSpec.describe Dealership do
     expect(@dealership).to be_instance_of(Dealership)
   end
 
+  it 'starts with an empty lot' do
+    expect(@dealership.inventory).to eq([])
+  end
 
 
 
