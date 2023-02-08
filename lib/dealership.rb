@@ -6,7 +6,9 @@ class Dealership
     @inventory = []
   end
 
-
+  def inventory_count
+    @inventory.length
+  end
 
 
 
