@@ -20,7 +20,11 @@ class Dealership
     else
       return false
     end
-  
   end
 
+  def cars_by_make(make)
+    @inventory.find_all do |cars|
+      cars.make == make
+    end
+  end
 end
