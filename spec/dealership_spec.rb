@@ -10,7 +10,7 @@ RSpec.describe Dealership do
     expect(dealership).to be_instance_of(Dealership)
   end
 
-  it 'starts with an empty lot' do
+  it 'starts with an empty inventory' do
     dealership = Dealership.new("Acme Auto", "123 Main Street")
 
     expect(dealership.inventory).to eq([])
@@ -78,7 +78,7 @@ RSpec.describe Dealership do
     expect(dealership.cars_by_make("Ford")).to eq([car_1])
   end
 
- it 'can calculate total value' do
+ it 'can calculate total cost' do
     dealership = Dealership.new("Acme Auto", "123 Main Street")
     car_1 = Car.new("Ford Mustang", 1500, 36)
     car_2 = Car.new("Toyota Prius", 1000, 48)
