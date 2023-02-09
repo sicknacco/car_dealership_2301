@@ -36,4 +36,12 @@ class Dealership
     end
   end
 
+  def details
+    details_hash = Hash.new
+    details_hash["total_value"] = total_value
+    details_hash["address"] = @address
+    details_hash
+  end
+
+
 end
