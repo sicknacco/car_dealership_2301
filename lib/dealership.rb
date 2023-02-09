@@ -27,4 +27,9 @@ class Dealership
       cars.make == make
     end
   end
+
+  def total_value
+    total = @inventory.
+
+
 end
