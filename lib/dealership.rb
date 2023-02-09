@@ -14,6 +14,13 @@ class Dealership
     @inventory << car
   end
 
-
+  def has_inventory?
+    if inventory_count > 0
+      return true
+    else
+      return false
+    end
+  
+  end
 
 end
