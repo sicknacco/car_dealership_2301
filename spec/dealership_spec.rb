@@ -61,9 +61,17 @@ RSpec.describe Dealership do
     dealership.add_car(car_4)
 
     expect(dealership.has_inventory?).to eq(true)
-    
   end
 
+  it 'can sort cars by make' do
+    dealership.add_car(car_1)
+    dealership.add_car(car_2)
+    dealership.add_car(car_3)
+    dealership.add_car(car_4)
+
+    epxpect(dealership.cars_by_make("Toyota")).to eq([car_2, car_3])
+    expect(dealership.cars_by_make("Ford")).to eq([car_1])
+  end
 
 
 
