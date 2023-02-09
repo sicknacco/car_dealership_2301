@@ -16,12 +16,14 @@ class Dealership
 
   def has_inventory?
     if inventory_count > 0
-      return true
+      true
     else
-      return false
+      false
     end
   end
-
+#def has_inventory?
+# inventory_count > 0
+# end
   def cars_by_make(make)
     @inventory.find_all do |cars|
       cars.make == make
@@ -29,7 +31,9 @@ class Dealership
   end
 
   def total_value
-    total = @inventory.
-
+    @inventory.sum do |car|
+      car.total_cost
+    end
+  end
 
 end
